@@ -8,8 +8,6 @@ How to Run the code:
 
 - Execute the Application from an IDE or run using gradle command in the 
   terminal(gradlew bootRun).
-  
-- There are 4 endpoints each for Incident and User api.
 
 - Use postman(recommended) for hitting apis and can easily specify different creds 
   each time if needed. Swagger is also available(http://localhost:8080/swagger-ui/index.html/).
@@ -23,14 +21,13 @@ How to Run the code:
 
 - Incident POST/PUT request format:
   {
-  "id": "string",
   "title": "string",
-  "assignee": "any username in users collection"     //non required field
+  "assignee": "any username in users collection",    //non required field
+  "status": "any value from enum"     //non required field - only for PUT
   }
   
 - User POST/PUT request format:
   {
-  "userId": "string",
   "username": "string",
   "password": "string",      //will be bcrypted while saving
   "assigned": true          // non required field

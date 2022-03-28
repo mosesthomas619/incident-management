@@ -13,8 +13,8 @@ public class IncidentRequest {
     private String id;
 
     @JsonProperty("title")
-    @NotNull(message = "Incident title cannot be null")
-    @NotBlank(message = "Incident title cannot be blank")
+    //@NotNull(message = "Incident title cannot be null")
+    @NotBlank(message = "Incident title cannot be empty")
     private String title;
 
     @JsonProperty("status")
